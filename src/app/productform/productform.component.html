@@ -1,0 +1,19 @@
+<form [formGroup]="productAdd">
+  <div class="form-group">
+    <input type="text" class="form-control w-100" formControlName="id" name="id" placeholder="Product ID"
+      [readOnly]="isEdit">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="name" name="name" placeholder="Product Name">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control w-100" formControlName="price" name="price" placeholder="Price">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control w-100" formControlName="quantity" name="quantity" placeholder="Quantity">
+  </div>
+
+</form>
+<button (click)="add()" *ngIf="!isEdit">Add</button>
+<button (click)="edit()" *ngIf="isEdit">Edit</button>
+<button (click)="resetForm()" *ngIf="!isEdit">Reset</button>

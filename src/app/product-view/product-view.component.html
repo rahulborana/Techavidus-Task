@@ -1,0 +1,13 @@
+<p>product-view works!</p>
+<div *ngIf="product">
+    <p>Name: {{product.name}}</p>
+    <p>Id: {{product.id}}</p>
+    <p>Quantity:{{product.quantity}}</p>
+    <p>Product Price: {{product.price}}</p> 
+     <a [routerLink]="['/productform', product.id]">Edit</a> 
+   
+  </div>
+
+
+
+  
